@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CFE6256E-6CE3-4BAB-9A7A-F35BF42DFEEE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>supermarket项目</RootNamespace>
+    <AssemblyName>supermarket项目</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>D:\WinForm皮肤控件\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="VIPCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIPCart.Designer.cs">
+      <DependentUpon>VIPCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsRecord.Designer.cs">
+      <DependentUpon>Cashier_GoodsRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\GoodsTypeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\GoodsTypeInfo.Designer.cs">
+      <DependentUpon>GoodsTypeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\LoginAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\LoginAdd.Designer.cs">
+      <DependentUpon>LoginAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\LoginInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\LoginInfo.Designer.cs">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="前台\Class1.cs" />
+    <Compile Include="前台\GiftAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\GiftAdd.Designer.cs">
+      <DependentUpon>GiftAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\GiftChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\GiftChange.Designer.cs">
+      <DependentUpon>GiftChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\GiftChangeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\GiftChangeInfo.Designer.cs">
+      <DependentUpon>GiftChangeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\Hang up.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\Hang up.Designer.cs">
+      <DependentUpon>Hang up.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\MainFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\MainFrom.Designer.cs">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\UserPWD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\UserPWD.Designer.cs">
+      <DependentUpon>UserPWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\VipAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\VipAdd.Designer.cs">
+      <DependentUpon>VipAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\VipInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\VipInfo.Designer.cs">
+      <DependentUpon>VipInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\VipUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\VipUpdate.Designer.cs">
+      <DependentUpon>VipUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\Chanzhi.cs" />
+    <Compile Include="管理员\ForYuanG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\ForYuanG.Designer.cs">
+      <DependentUpon>ForYuanG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\ForTanJia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\ForTanJia.Designer.cs">
+      <DependentUpon>ForTanJia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\ForXiGai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\ForXiGai.Designer.cs">
+      <DependentUpon>ForXiGai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\FormZJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\FormZJ.Designer.cs">
+      <DependentUpon>FormZJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="管理员\Cashier_Boss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="管理员\Cashier_Boss.Designer.cs">
+      <DependentUpon>Cashier_Boss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsInfo.Designer.cs">
+      <DependentUpon>Cashier_GoodsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_GoodsType.Designer.cs">
+      <DependentUpon>Cashier_GoodsType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_Main.Designer.cs">
+      <DependentUpon>Cashier_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_OriderClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_OriderClose.Designer.cs">
+      <DependentUpon>Cashier_OriderClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\Cashier_OriderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\Cashier_OriderInfo.Designer.cs">
+      <DependentUpon>Cashier_OriderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\DBHelper.cs" />
+    <Compile Include="收银\FrmGoodsInfoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\FrmGoodsInfoAdd.Designer.cs">
+      <DependentUpon>FrmGoodsInfoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\FrmGoodsInfoAlter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\FrmGoodsInfoAlter.Designer.cs">
+      <DependentUpon>FrmGoodsInfoAlter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\OriderInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\OriderInfo.Designer.cs">
+      <DependentUpon>OriderInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收银\OriderInfoClass.cs" />
+    <Compile Include="收银\OriderInfo_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收银\OriderInfo_Details.Designer.cs">
+      <DependentUpon>OriderInfo_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="前台\窗体设置测试.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\窗体设置测试.Designer.cs">
+      <DependentUpon>窗体设置测试.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VIPCart.resx">
+      <DependentUpon>VIPCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_GoodsRecord.resx">
+      <DependentUpon>Cashier_GoodsRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\GoodsTypeInfo.resx">
+      <DependentUpon>GoodsTypeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\LoginAdd.resx">
+      <DependentUpon>LoginAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\LoginInfo.resx">
+      <DependentUpon>LoginInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\GiftAdd.resx">
+      <DependentUpon>GiftAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\GiftChange.resx">
+      <DependentUpon>GiftChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\GiftChangeInfo.resx">
+      <DependentUpon>GiftChangeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\Hang up.resx">
+      <DependentUpon>Hang up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\MainFrom.resx">
+      <DependentUpon>MainFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\UserPWD.resx">
+      <DependentUpon>UserPWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\VipAdd.resx">
+      <DependentUpon>VipAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\VipInfo.resx">
+      <DependentUpon>VipInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\VipUpdate.resx">
+      <DependentUpon>VipUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\ForYuanG.resx">
+      <DependentUpon>ForYuanG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\ForTanJia.resx">
+      <DependentUpon>ForTanJia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\ForXiGai.resx">
+      <DependentUpon>ForXiGai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\FormZJ.resx">
+      <DependentUpon>FormZJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理员\Cashier_Boss.resx">
+      <DependentUpon>Cashier_Boss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_GoodsInfo.resx">
+      <DependentUpon>Cashier_GoodsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_GoodsType.resx">
+      <DependentUpon>Cashier_GoodsType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_Main.resx">
+      <DependentUpon>Cashier_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_OriderClose.resx">
+      <DependentUpon>Cashier_OriderClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\Cashier_OriderInfo.resx">
+      <DependentUpon>Cashier_OriderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\FrmGoodsInfoAdd.resx">
+      <DependentUpon>FrmGoodsInfoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\FrmGoodsInfoAlter.resx">
+      <DependentUpon>FrmGoodsInfoAlter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\OriderInfo.resx">
+      <DependentUpon>OriderInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收银\OriderInfo_Details.resx">
+      <DependentUpon>OriderInfo_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="前台\窗体设置测试.resx">
+      <DependentUpon>窗体设置测试.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-43e633_3840x1600.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallhaven-43e633_1920x1080.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c10.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee4.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f6.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g3.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee12.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\07631fa55df65e0edf46a19b36810248.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\0dce86e21b826a2e7688d7505940f62c.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10dabdb9d0f67cf24ecd1330b7c5e95f.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10f9257200bd8f5571ab7d1a3db07cad.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1d68410f0d5fe6695b40c21cfcd17759.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32f2408db8074f29f704b938e369acc9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32f2408db8074f29f704b938e369acc91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3fafc4eb173bd27fa3eb4648c1e64a1f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4c40a898f108c5227fdc57c6cdf567a9 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4c40a898f108c5227fdc57c6cdf567a9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55f930d4b9f41a96e2fcbf4137acbfc7 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\55f930d4b9f41a96e2fcbf4137acbfc7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\58c93daaec901c8edbd1dea116b1919f.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5b271f445a39d508f529306bed7f12c9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5fa08c268e502c79683c2541c0421bcd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64a6e97140690fda7f814fd26caf18f9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85a1212f05f24d3c0f325abb73c2c572.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\85a1212f05f24d3c0f325abb73c2c5721.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91e83d48647a0f926068982b5d5602ee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9d573a40603c6f817bf44396a7f15d6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9d573a40603c6f817bf44396a7f15d61.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9d573a40603c6f817bf44396a7f15d62.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\b9d573a40603c6f817bf44396a7f15d63.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bc71b62462f6def546628f909322010f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c01046e2274f41e6d6f86ff8ebdaf34a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c37467ad9ffeb2af3baf14c19684f2c9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c40079d59ddf566ee9aa588811f0fadc.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cb22385bd200f136af0b9ab116fca6de.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cf7fd722c05f72a57e6ebe79f2089d7d.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\da1ba2d8ff0e46b1e9844868f144e0ca.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e5fe16d2d906cc90e3e12311d7fe6423.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Inked55f930d4b9f41a96e2fcbf4137acbfc7 %281%29_LI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\power_exit_118px_1122609_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20201203091237.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20201203092030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20201203113012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20201203113032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QQ截图20201204095839.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\0dce86e21b826a2e7688d7505940f62c.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\1d68410f0d5fe6695b40c21cfcd17759.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\3fafc4eb173bd27fa3eb4648c1e64a1f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\4c40a898f108c5227fdc57c6cdf567a9 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\4c40a898f108c5227fdc57c6cdf567a9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\5.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\5b271f445a39d508f529306bed7f12c9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\5fa08c268e502c79683c2541c0421bcd.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\9.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\10dabdb9d0f67cf24ecd1330b7c5e95f.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\10f9257200bd8f5571ab7d1a3db07cad.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\32f2408db8074f29f704b938e369acc9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\32f2408db8074f29f704b938e369acc91.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\55f930d4b9f41a96e2fcbf4137acbfc7 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\55f930d4b9f41a96e2fcbf4137acbfc7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\58c93daaec901c8edbd1dea116b1919f.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\64a6e97140690fda7f814fd26caf18f9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\85a1212f05f24d3c0f325abb73c2c572.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\85a1212f05f24d3c0f325abb73c2c5721.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\91e83d48647a0f926068982b5d5602ee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\07631fa55df65e0edf46a19b36810248.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\b9d573a40603c6f817bf44396a7f15d6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\b9d573a40603c6f817bf44396a7f15d61.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\b9d573a40603c6f817bf44396a7f15d62.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\b9d573a40603c6f817bf44396a7f15d63.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\bc71b62462f6def546628f909322010f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\c.jpg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\c01046e2274f41e6d6f86ff8ebdaf34a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\c37467ad9ffeb2af3baf14c19684f2c9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\c40079d59ddf566ee9aa588811f0fadc.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\cb22385bd200f136af0b9ab116fca6de.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\cf7fd722c05f72a57e6ebe79f2089d7d.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\da1ba2d8ff0e46b1e9844868f144e0ca.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\e5fe16d2d906cc90e3e12311d7fe6423.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\Inked55f930d4b9f41a96e2fcbf4137acbfc7 %281%29_LI.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\power_exit_118px_1122609_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\QQ截图20201203091237.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\QQ截图20201203092030.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\QQ截图20201203113012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\QQ截图20201203113032.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Supermarket2\Resources\QQ截图20201204095839.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
